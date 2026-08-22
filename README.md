@@ -6,8 +6,8 @@ A SQL-based analysis and Tableau dashboard exploring Superstore sales performanc
 Public "Superstore" dataset (transaction-level retail sales data), cleaned and queried using SQLite.
 
 ## Tools
-- **SQLite (DB Browser)** — data cleaning & SQL analysis
-- **Tableau Public** — interactive dashboard & visualization
+- **SQLite (DB Browser)** - data cleaning & SQL analysis
+- **Tableau Public** - interactive dashboard & visualization
 
 ## Business Questions
 1. Which category/sub-category is most profitable vs. most loss-making?
