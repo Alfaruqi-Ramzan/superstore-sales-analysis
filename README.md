@@ -22,7 +22,7 @@ Public "Superstore" dataset (transaction-level retail sales data), cleaned and q
 - **Seasonal Trend**: Sales peak in Q1 (March) and Q4 (September–November), suggesting seasonal demand that could inform inventory and promotion planning.
 
 ## Dashboard
-🔗 [View interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/alfaruqi.ramzan/viz/SuperstoreSalesProfitAnalysis_17873045756980/Dashboard1?publish=yes)
+[View interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/alfaruqi.ramzan/viz/SuperstoreSalesProfitAnalysis_17873045756980/Dashboard1?publish=yes)
 
 ## Data Quality Notes
 During analysis, an inconsistency was found between the number of unique Product Names (1,850) and unique Product IDs (1,862). Further inspection showed some Product IDs are shared across different product names, likely due to ID reuse across order batches. This does not affect the analysis in this project, as none of the aggregations are performed at the Product ID/Name level.
