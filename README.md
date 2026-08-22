@@ -18,7 +18,7 @@ Public "Superstore" dataset (transaction-level retail sales data), cleaned and q
 ## Key Insights
 - **Category/Sub-Category**: Technology (Copiers) is the most profitable sub-category, while Furniture (Tables) consistently generates a loss overall.
 - **Region/State**: The West region has the highest total profit, driven mainly by California. Texas (Central region) has the largest overall loss among all states.
-- **Discount vs. Profit**: Profit declines as discount increases — discounts above 20% are consistently associated with net losses.
+- **Discount vs. Profit**: Profit declines as discount increases, discounts above 20% are consistently associated with net losses.
 - **Seasonal Trend**: Sales peak in Q1 (March) and Q4 (September–November), suggesting seasonal demand that could inform inventory and promotion planning.
 
 ## Dashboard
