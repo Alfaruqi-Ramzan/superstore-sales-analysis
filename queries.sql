@@ -11,7 +11,7 @@ FROM orders"
 - Total profit aggregated by category & sub-category
 "SELECT Category,Sub_Category,SUM(profit)
 FROM orders
-GROUP BY Sub_Category
+GROUP BY Category, Sub_Category
 ORDER BY sum(profit) DESC"
 
 Q2: Which region/state has high sales but low profit?
@@ -28,17 +28,17 @@ FROM orders
 GROUP BY region,state
 ORDER BY jmlpro DESC"
 
-- Best & worst performing state overall 
-"WITH tabel_peringkat AS (
-SELECT region,state,SUM(profit) as jmlpro,
-RANK() OVER(order by SUM(profit) DESC) as peringkat
+- Best & worst performing state with high sales but low profit 
+"WITH state_summary AS(SELECT Region,state, 
+		SUM(Sales) as total_sales,
+		SUM(profit) as total_profit,
+		SUM(profit)/SUM(sales) as profit_margin
 FROM orders
-GROUP BY region,state
-ORDER BY jmlpro DESC
-)
-SELECT region,state,jmlpro,peringkat
-FROM tabel_peringkat
-WHERE peringkat=1 OR peringkat = 49"
+GROUP BY Region,State)
+SELECT *
+FROM state_summary
+WHERE total_sales > (SELECT AVG(total_sales) FROM state_summary)
+ORDER BY profit_margin ASC"
 
 Q3: Does a higher discount lead to lower profit?
 
