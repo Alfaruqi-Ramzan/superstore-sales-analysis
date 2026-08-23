@@ -60,7 +60,7 @@ Q4: Is there a seasonal pattern in monthly/yearly sales?
 
 - Number of transactions per year
 "SELECT substr(order_date_iso,1,4) as Tahun,
-count(sales) as num_transaction
+count(DISTINCT "order id") as num_transaction
 FROM orders
 GROUP BY Tahun"
 
