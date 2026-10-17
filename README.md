@@ -1,35 +1,70 @@
 # Superstore Sales & Profit Analysis
 
-A SQL-based analysis and Tableau dashboard exploring Superstore sales performance across category, region, discount, time and profit. Built as a portfolio project to practice end-to-end data analysis, from raw data to business insight.
+An end-to-end retail sales analysis using SQL and Tableau Public. This project explores sales trends, profitability across U.S. states, and differences in profit between product sub-categories using the Sample Superstore dataset.
+
+**[View the interactive Tableau dashboard](https://public.tableau.com/app/profile/alfaruqi.ramzan/viz/SuperstoreSalesProfitAnalysis_17873045756980/SuperstoreDashboard?publish=yes)**
+
+## Project overview
+
+The goal is to understand how sales and profit vary over time, where the business earns or loses money, and which product sub-categories contribute most to overall profit. The dashboard is designed as a compact executive overview with a year filter.
 
 ## Dataset
-Public "Superstore" dataset (transaction-level retail sales data), cleaned and queried using SQLite.
+
+- **Source:** Sample Superstore, a public retail transaction dataset used for educational analysis.
+- **Period:** 2014–2017
+- **Geographic coverage:** United States
+- **Key fields:** Order Date, Order ID, State, Region, Category, Sub-Category, Sales, Profit, Discount.
+- **Currency:** USD assumed, based on the U.S. context; the dataset description does not explicitly specify currency.
 
 ## Tools
-- **SQLite (DB Browser)** - data cleaning & SQL analysis
-- **Tableau Public** - interactive dashboard & visualization
 
-## Business Questions
-1. Which category/sub-category is most profitable vs. most loss-making?
-2. Which region/state has high sales but low profit?
-3. Does a higher discount lead to lower profit?
-4. Is there a seasonal pattern in monthly/yearly sales?
+- **SQLite / DB Browser for SQLite:** exploratory SQL queries and data-quality checks
+- **Tableau Public:** interactive dashboard, calculated fields, and visual analysis
 
-## Key Insights
-- **Category/Sub-Category**: Technology (Copiers) is the most profitable sub-category, while Furniture (Tables) consistently generates a loss overall.
-- **Region/State**: Among states with above-average sales, Ohio stands out with high sales (~$78K) but a negative profit margin (≈ -21.7%) — a clear case of high sales not translating into profit. Looking at overall profitability across all states, the West region generates the highest total profit (led by California), while Texas (Central region) records the largest overall loss.
-- **Discount vs. Profit**: Profit declines as discount increases, discounts above 20% are consistently associated with net losses.
-- **Seasonal Trend**: Sales peak in Q1 (March) and Q4 (September–November), suggesting seasonal demand that could inform inventory and promotion planning.
+## Dashboard highlights
 
-## Dashboard
-[View interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/alfaruqi.ramzan/viz/SuperstoreSalesProfitAnalysis_17873045756980/Dashboard1?publish=yes)
+| Metric | 2014–2017 |
+| --- | ---: |
+| Total Sales | $2.30M |
+| Total Profit | $286.4K |
+| Profit Margin | 12.5% |
+| Total Orders | 5,009 |
 
-## Data Quality Notes
-During analysis, an inconsistency was found between the number of unique Product Names (1,850) and unique Product IDs (1,862). Further inspection showed some Product IDs are shared across different product names, likely due to ID reuse across order batches. This does not affect the analysis in this project, as none of the aggregations are performed at the Product ID/Name level.
+*Metrics are rounded as displayed in the published dashboard. Total Orders uses distinct Order IDs.*
 
-## Files
-- `queries.sql` — all SQL queries used in this analysis
+The dashboard contains:
+- **Monthly Sales by Year:** compares monthly sales patterns across 2014–2017.
+- **Profit by State:** highlights geographic differences in profit and loss.
+- **Profit by Sub-Category:** ranks product sub-categories by total profit.
+- **Year filter:** allows analysis of individual or multiple years.
+
+## Key findings
+
+1. **Overall profitability:** Across the four-year period, sales total approximately $2.30M and profit reaches $286.4K, corresponding to a 12.5% profit margin.
+2. **Top and bottom sub-categories:** Copiers contributes the highest total profit (approximately $55.6K), while Tables records the largest loss (approximately -$17.7K).
+3. **Geographic performance:** Profit varies considerably between states. The map shows that positive sales activity does not guarantee positive profit in every market.
+4. **Sales pattern:** Monthly sales vary across the year, with visible peaks toward the later months in several years. Further analysis is needed before attributing the pattern to seasonality.
+
+## Business recommendations
+
+- Examine pricing, costs, and discounts in loss-making sub-categories, particularly Tables.
+- Investigate states with negative profit before increasing sales or promotion budgets in those markets.
+- Use monthly patterns as a starting point for inventory and campaign planning, while validating trends against additional periods and operational data.
+
+## Repository files
+
+- `queries.sql` — SQL exploration and data-quality queries.
+- [Interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/alfaruqi.ramzan/viz/SuperstoreSalesProfitAnalysis_17873045756980/SuperstoreDashboard?publish=yes) — the latest published dashboard.
+
+The final packaged Tableau workbook (`.twbx`) and dashboard screenshot are available as project deliverables and can be added to this repository.
+
+## Notes
+
+This is a portfolio project using a sample dataset rather than live business data. Currency is treated as USD for display purposes. Findings describe the observed data and do not establish causal effects.
 
 ## Author
-Muhammad Alfaruqi Ramzan Mahrudin — Mathematics Graduate, Universitas Pendidikan Indonesia
-[https://www.linkedin.com/in/alfaruqiramzan/](#)
+
+**Muhammad Alfaruqi Ramzan Mahrudin**  
+Mathematics Graduate, Universitas Pendidikan Indonesia
+
+[LinkedIn](https://www.linkedin.com/in/alfaruqiramzan/) · [GitHub](https://github.com/Alfaruqi-Ramzan)
