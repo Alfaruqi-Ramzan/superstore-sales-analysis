@@ -1,70 +1,49 @@
 # Superstore Sales & Profit Analysis
 
-A retail analytics portfolio project examining sales performance, profitability, and product performance across the United States from 2014 to 2017. I used SQL to explore the data and Tableau Public to build an interactive dashboard.
+I worked with the Sample Superstore dataset to look at sales trends and identify where the business was making or losing money. I used SQLite for the initial exploration and Tableau Public to build the dashboard.
 
-**[Explore the interactive dashboard](https://public.tableau.com/app/profile/alfaruqi.ramzan/viz/SuperstoreSalesProfitAnalysis_17873045756980/SuperstoreDashboard?publish=yes)** · **[Download the Tableau workbook](FINAL_Superstore%20Sales%20%26%20Profit%20Analysis.twbx)**
+[View the dashboard on Tableau Public](https://public.tableau.com/app/profile/alfaruqi.ramzan/viz/SuperstoreSalesProfitAnalysis_17873045756980/SuperstoreDashboard?publish=yes)
 
-![Superstore Performance Overview](Dashboard%20Superstore%20Performance%20.png)
+![Superstore dashboard](Dashboard%20Superstore%20Performance%20.png)
 
-## Project summary
+## About the project
 
-This project focuses on three business questions:
+The dataset covers Superstore transactions in the United States from 2014 to 2017. I focused on monthly sales, profit by state, and profit by product sub-category. The dashboard also includes a year filter.
 
-1. How does monthly sales performance change across years?
-2. Which U.S. states contribute positive or negative profit?
-3. Which product sub-categories perform best and worst by total profit?
+The main figures for the full period are:
 
-The dashboard includes a year filter for exploring performance over different periods.
-
-## Dashboard KPIs
-
-| Metric | 2014–2017 |
+| Metric | Value |
 | --- | ---: |
-| Total sales | $2.30M |
-| Total profit | $286.4K |
+| Sales | $2.30M |
+| Profit | $286.4K |
 | Profit margin | 12.5% |
-| Distinct orders | 5,009 |
+| Orders | 5,009 |
 
-*Values are rounded to match the dashboard. USD is an assumption based on the dataset's U.S. context; currency is not explicitly specified in its description.*
+*Values are rounded to match the dashboard. Orders are counted using distinct Order IDs.*
 
-## Key insights
+## What I found
 
-- **Sub-category performance:** Copiers generated approximately $55.6K in profit, while Tables recorded approximately $17.7K in losses.
-- **Geographic profitability:** State-level profit varies substantially, with some states showing losses despite recorded sales.
-- **Monthly trends:** Sales show fluctuations across months and years, with several of the larger monthly totals appearing in the later part of the year. These are observed patterns, not proof of seasonality.
+- **Copiers** had the highest total profit at around $55.6K. **Tables** had the largest loss at around $17.7K.
+- Profit differed quite a bit between states. Some states recorded negative profit, which is worth examining before increasing sales efforts there.
+- Monthly sales fluctuated across the four years, with several high points in the later months. More years of data would help determine whether this is a recurring seasonal pattern.
 
-## Recommendations
+Based on these results, I would look more closely at the pricing and costs of loss-making products, especially Tables. I'd also investigate what drives losses in certain states rather than focusing only on sales volume.
 
-- Review pricing, discounts, and costs for loss-making sub-categories, particularly Tables.
-- Investigate the reasons for negative profitability in specific states before expanding promotional spending.
-- Use monthly sales trends as an input to planning, while checking additional periods before concluding that a pattern is seasonal.
+## Tools and files
 
-## Tools and workflow
+I used **SQLite (DB Browser for SQLite)** for SQL queries and **Tableau Public** for the dashboard.
 
-- **SQLite (DB Browser):** SQL-based exploration and data-quality checks.
-- **Tableau Public:** KPI calculations, monthly trends, profit mapping, sub-category analysis, and interactive filters.
+- [SQL queries](queries.sql)
+- [Tableau workbook (.twbx)](FINAL_Superstore%20Sales%20%26%20Profit%20Analysis.twbx)
+- [Dashboard screenshot](Dashboard%20Superstore%20Performance%20.png)
 
-The SQL exploration is available in [`queries.sql`](queries.sql). The published dashboard represents the final visual analysis.
+## Dataset
 
-## Dataset and attribution
+Source: [Sample Superstore on Kaggle](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
 
-The analysis uses **Sample Superstore**, a public educational retail dataset (9,994 transaction lines, 2014–2017).
+The dataset contains 9,994 transaction rows. Its description doesn't explicitly state a currency, so I used USD based on the U.S. sales context. The original dataset belongs to its respective creator.
 
-**[Dataset source on Kaggle — vivek468 / Superstore Dataset (Final)](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)**
-
-The dataset was not authored by me. Please consult the dataset owner and license information before redistributing the original CSV. The Tableau packaged workbook can include an embedded data extract; refer to the source's terms before further redistribution.
-
-## Project files
-
-| File | Purpose |
-| --- | --- |
-| [Dashboard screenshot](Dashboard%20Superstore%20Performance%20.png) | Overview of the completed dashboard |
-| [Tableau workbook](FINAL_Superstore%20Sales%20%26%20Profit%20Analysis.twbx) | Packaged interactive Tableau workbook |
-| [SQL queries](queries.sql) | Exploration and analysis queries |
-
-## Author
+## Contact
 
 **Muhammad Alfaruqi Ramzan Mahrudin**  
-Mathematics Graduate, Universitas Pendidikan Indonesia
-
-[LinkedIn](https://www.linkedin.com/in/alfaruqiramzan/) · [GitHub profile](https://github.com/Alfaruqi-Ramzan)
+[LinkedIn](https://www.linkedin.com/in/alfaruqiramzan/) | [GitHub](https://github.com/Alfaruqi-Ramzan)
